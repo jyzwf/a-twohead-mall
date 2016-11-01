@@ -1,0 +1,108 @@
+$base-color:#fc4766;
+$bg-color:#f3f5f7;
+$pointer-color:#d2d2d2;
+$input-color:#fff;
+
+@mixin set_size($w:5.5rem,$h:5.5rem){
+	width:$w;
+	min-width:$w;
+	height:$h
+}
+
+@mixin flea-margin-t($t:1rem){
+	margin-top:$t !important;
+}
+
+$icon-color: (1: #35a8f9, 2: #52a523, 3: #ea716e);
+
+@import '../../sass/reset.scss';
+
+body{
+	background:$bg-color;
+	cursor:pointer;
+}
+
+
+.aui-list{
+	&:before,&:after{
+		content:none;
+	}
+	.heading_pic{
+		background:inherit;
+		// margin:0.5rem 0;
+
+		&:after{
+			content:none;
+		}
+		img{
+			@include set_size()
+		}
+			
+	}
+}
+
+.flea-login-action{
+	.aui-list-item{
+		background:transparent;
+		&:first-child{
+			@include flea-margin-t(0.5rem);
+			&:after{
+				content:none;
+			}
+		}
+	}
+
+	.flea-login-btn{
+		background:$base-color;
+		color:$input-color;
+		padding: 0.6rem 0;
+	}
+
+    .flea-login-btn:active {
+        color: #fff;
+        background-color: #ff0042;
+    }
+}
+.flea-login-ways{
+    margin-top:3rem;
+    padding-top: 4rem;
+	.flea-pointers{
+		@include set_size(1rem,1rem);
+		background:$pointer-color;
+		transform:scale(0.25);
+		border-radius:50%;	
+	}
+
+	.aui-list-item-inner{
+		display:flex;
+	}
+
+	.flea-word{
+		color:$pointer-color;
+	}
+
+	.flea-lines{
+		flex:auto;
+		height:1px;
+		background:$pointer-color;
+	}
+
+	.flea-icon-font-size{
+		font-size:1.8rem !important;
+		color:$input-color;
+		padding:0.4rem;
+	}
+
+	.flea-login-icon{
+		display:flex;
+		justify-content:space-around;
+
+		@each $num, $color in $icon-color{
+		  .aui-list-item-center:nth-of-type( #{$num} ) {
+		  	border-radius:50%;
+		    background:$color;
+		    @include set_size(2.7rem,2.7rem);
+		  }
+		}
+	 }
+}

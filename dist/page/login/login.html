@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>跳蚤街</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/libs/css/aui.2.0.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/libs/css/aui-skin.css" />
+	<link rel="stylesheet" type="text/css" href="./login.css" />
+    <style type="text/css" media="screen">
+        html{
+            background:#fff;
+    }
+    </style>
+</head>
+<body>
+	<!-- 整个容器 -->
+	<div class="aui-content" id="flea_login">
+        <header-nav :title="title"></header-nav>
+    <br>
+
+<!-- 表单部分 -->
+		<section class="aui-list aui-form-list ">
+        	<div class="aui-list-item aui-list-item-center aui-margin-r-15 aui-margin-l-15">
+				<div class="aui-list-item-inner">
+            	    <div class="aui-list-item-label-icon">
+            	        账号
+            	    </div>
+            	    <div class="aui-list-item-input aui-padded-r-5">
+            	        <input type="text" id='login_account' v-model='login_account' placeholder="请输入你的手机号/邮箱">
+            	    </div>
+            	    <div class="aui-list-item-label-icon" v-show='login_account' v-remove_ctx = 'login_account'>
+                        <i class="aui-iconfont aui-icon-close"></i>
+                    </div>
+            	</div>
+        	</div>
+        	<div class="aui-list-item aui-list-item-center  aui-margin-r-15 aui-margin-l-15">
+            	<div class="aui-list-item-inner">
+            	    <div class="aui-list-item-label-icon">
+                        密码
+                    </div>
+            	    <div class="aui-list-item-input aui-padded-r-5">
+            	        <input type="password" id='login_password'  v-model='login_password' placeholder="请输入登录密码">
+            	    </div>
+            	    <div class="aui-list-item-label-icon" v-show='login_password' v-remove_ctx = 'login_password'>
+                        <i class="aui-iconfont aui-icon-close"></i>
+                    </div>
+            	</div>
+        	</div>
+		</section>
+
+<!-- 登录按钮部分 -->
+        <section class="aui-list aui-media-list flea-login-action">
+            <div class="aui-list-item flea-margin-t-10 aui-list-item-center">
+                <div class="aui-list-item-inner">
+                   <div class="aui-btn flea-login-btn  aui-btn-block aui-btn-sm" @click='to_login' >登录</div>
+                </div>
+            </div>
+
+            <div class="aui-list-item" >
+                <div class="aui-list-item-inner aui-padded-t-5">
+                    <div class="aui-list-item-text">
+                        <a href='../register/register_step1.html' class="aui-list-item-title  aui-font-size-14" style="color:#fc4766">快捷注册</a>
+                        <a href='../forget_password/forget_password.html' class="aui-list-item-title  aui-font-size-14" style="color:#fc4766">忘记密码？</a>
+                    </div>
+                        
+                    </div>
+            </div>
+        </section>
+	    
+<!-- 其他方式登入部分
+        <section class="aui-list aui-media-list flea-login-action flea-login-ways">
+            <div class="aui-list-item flea-margin-t-10">
+                <div class="aui-list-item-inner">
+                   <span class="flea-lines"></span>
+                   <span class="aui-img-round flea-pointers"></span>
+                   <span class="flea-word aui-font-size-12">社交登录</span>
+                   <span class="aui-img-round flea-pointers"></span>
+                   <span class="flea-lines"></span>
+                </div>
+            </div>
+
+            <div class="aui-list-item flea-login-icon aui-margin-t-10">
+                <div class="aui-list-item-center">
+                     <i class="aui-iconfont flea-icon-font-size aui-icon-qq"></i>
+                </div>
+
+                <div class="aui-list-item-center">
+                     <i class="aui-iconfont flea-icon-font-size aui-icon-wechat"></i>
+                </div>
+
+                <div class="aui-list-item-center">
+                     <i  class="aui-iconfont aui-icon-weibo flea-icon-font-size"></i>
+                </div>
+            </div>
+        </section>-->
+
+	</div>
+<script src="../../assets/libs/js/api.js" type="text/javascript" charset="utf-8" ></script>
+<script src="../../assets/libs/js/aui-toast.js" type="text/javascript" charset="utf-8" ></script>
+<script src="./login.js" type="text/javascript" charset="utf-8" ></script>
+</body>
+</html>

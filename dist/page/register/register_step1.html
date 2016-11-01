@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- // <script src="../../js/libs/flexible.js"></script> -->
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>跳蚤街</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/libs/css/aui.2.0.css" />
+	<link rel="stylesheet" type="text/css" href="./register_step1.css" />
+    <style type="text/css" media="screen">
+        html{
+            background:#fff;
+    }
+    </style>
+</head>
+<body>
+	<!-- 整个容器 -->
+	<div class="aui-content" id="flea_reg">
+            <header-nav :title="title"></header-nav>
+    <br>
+
+<!-- 表单部分 -->
+		<section class="aui-list aui-form-list ">
+        	<div class="aui-list-item aui-list-item-center aui-margin-r-15 aui-margin-l-15">
+				<div class="aui-list-item-inner">
+            	    <div class="aui-list-item-input aui-padded-r-5">
+            	        <input type="text" id='register_methods' placeholder="你常用的手机号/邮箱">
+            	    </div>
+            	    <div class="aui-list-item-label-icon close_account">
+                        <i class="aui-iconfont aui-icon-close"></i>
+                    </div>
+
+            	</div>
+        	</div>
+        	<div class="aui-list-item aui-list-item-center  aui-margin-r-15 aui-margin-l-15">
+            	<div class="aui-list-item-inner">
+            	    
+            	    <div class="aui-list-item-input aui-padded-r-5">
+            	        <input type="text" id='register_code' placeholder="6位数字验证码">
+            	    </div>
+            	    <div class="aui-list-item-label-icon close_account">
+                        <i class="aui-iconfont aui-icon-close"></i>
+                    </div>
+
+                    <div id='get_res_code' class="aui-list-item-label-icon aui-padded-l-15 aui-margin-r-15 flea-text-default">
+                        获取
+                    </div>
+            	</div>
+        	</div>
+		</section>
+
+        <!-- 登录按钮部分 -->
+        <section class="aui-list aui-media-list flea-login-action">
+            <div class="aui-list-item  aui-list-item-center">
+                <div class="aui-list-item-inner">
+                   <button class="aui-btn flea-register-btn flea-login-btn aui-btn-block aui-btn-sm" disabled>立即注册</button>
+                </div>
+            </div>
+        </section>
+	</div>
+
+<script src="../../assets/libs/js/api.js" type="text/javascript" charset="utf-8" ></script>
+<script src="../../assets/libs/js/aui-toast.js" type="text/javascript" charset="utf-8" ></script>
+<script src="./register_step1.js" type="text/javascript" charset="utf-8" ></script>
+</body>
+</html>
